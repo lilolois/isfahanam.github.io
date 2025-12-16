@@ -15,6 +15,7 @@ export default function App() {
 
   const RouterComponent =
     (import.meta.env.PROD === true || import.meta.env.NODE_ENV === "production") ? HashRouter : BrowserRouter;
+  console.log(basePath, import.meta.env);
 
   return (
     <RouterComponent basename={basePath}>
