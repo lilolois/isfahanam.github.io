@@ -70,14 +70,14 @@ export default function ImageSlider({ images, autoPlayMs = 3000, heightClass = "
       <button
         aria-label="prev"
         onClick={goPrev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95"
+        className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95"
       >
         <span className="text-lg">‹</span>
       </button>
       <button
         aria-label="next"
         onClick={goNext}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95"
+        className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95"
       >
         <span className="text-lg">›</span>
       </button>
@@ -89,7 +89,7 @@ export default function ImageSlider({ images, autoPlayMs = 3000, heightClass = "
             key={i}
             aria-label={`go-${i}`}
             onClick={() => setIndex(i)}
-            className={`w-2.5 h-2.5 rounded-full ${i === index ? "bg-white" : "bg-white/50"}`}
+            className={`cursor-pointer w-2.5 h-2.5 rounded-full ${i === index ? "bg-white" : "bg-white/50"}`}
           />
         ))}
       </div>
